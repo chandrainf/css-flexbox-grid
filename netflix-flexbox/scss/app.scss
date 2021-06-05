@@ -1,0 +1,180 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+    @include box-sizing(border-box);
+}
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+.alert {
+    color: #e87c03;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: .8rem;
+}
+body {
+  background-color: $black;
+  color: $gray2;
+  font-family: $main_font ;
+
+  @include tablet {
+    @include bg-image('bg.jpg');
+  }
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  color: $gray2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.site-header img {
+  margin-top: .5rem;
+  max-width: 100px;
+  @include tablet {
+    max-width: 180px;
+    margin-left: 2rem;
+  }
+}
+
+.login-form {
+  @include tablet {
+    background-color: rgba(0,0,0,.75);
+    max-width: 450px;
+    margin: 3rem auto 4rem auto;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+  }
+}
+
+form {
+  legend {
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+  .field {
+    display: flex;
+    margin-bottom: .8rem;
+    position: relative;
+
+    span {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 1.3rem;
+      left: 1rem;
+      font-size: .9rem;
+      transition: font-size .2s ease, top .2s ease;
+      &.valid {
+        font-size: .6rem;
+        top: .5rem;
+      }
+    }
+    input {
+      padding: 1.3rem 1rem .9rem 1rem;
+      flex: 1;
+      background-color: $gray;
+      border: none;
+      border-radius: 5px;
+      color: $white;
+      font-size: 1.2rem;
+
+      &:focus{
+        background-color: $gray3;
+        + label {
+          font-size: .6rem;
+          top: .5rem;
+        }
+      }
+    }
+  }
+
+  input[type="submit"]{
+    @include button($primary);
+    margin-top: 2rem;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+    margin-bottom: 6rem;
+
+    a, label {
+      font-size: .8rem;
+    }
+  }
+}
+
+.bottom-content {
+  padding-bottom: 2rem;
+  @include tablet {
+    padding-top: 6rem;
+  }
+  a {
+    font-size: .8rem;
+    display: flex;
+  }
+  .new-user {
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    span {
+      color: $white;
+      margin-left: .5rem;
+    }
+  }
+}
+.site-footer {
+  border-top: 1px solid $gray2;
+  padding: 2rem 0 4rem 0;
+  @include tablet {
+    border-top: unset;
+    background-color: rgba(0,0,0,.75);
+    padding: 1rem 0 3rem 0;
+  }
+  .container {
+    max-width: 60%;
+  }
+
+  .menu-footer {
+    padding: .5rem 0 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      max-width: 50%;
+    }
+    a {
+      font-size: .8rem;
+    }
+  }
+  select {
+    background-color: $black;
+    border-color: $gray3;
+    color: $gray2;
+    appearance: none;
+    padding: 1rem 3rem;
+    font-size: .8rem;
+  }
+
+}

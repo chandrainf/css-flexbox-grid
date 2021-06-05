@@ -1,0 +1,241 @@
+/** Media Queries **/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.alert {
+  color: #e87c03;
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: .8rem;
+}
+
+body {
+  background-color: #000000;
+  color: #8c8c8c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    background-image: url(../img/bg.jpg);
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  color: #8c8c8c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header img {
+  margin-top: .5rem;
+  max-width: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-header img {
+    max-width: 180px;
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .login-form {
+    background-color: rgba(0, 0, 0, 0.75);
+    max-width: 450px;
+    margin: 3rem auto 4rem auto;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+  }
+}
+
+form legend {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+form .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .8rem;
+  position: relative;
+}
+
+form .field span {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  text-transform: uppercase;
+}
+
+form .field span:hover {
+  cursor: pointer;
+}
+
+form .field label {
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  font-size: .9rem;
+  -webkit-transition: font-size .2s ease, top .2s ease;
+  transition: font-size .2s ease, top .2s ease;
+}
+
+form .field label.valid {
+  font-size: .6rem;
+  top: .5rem;
+}
+
+form .field input {
+  padding: 1.3rem 1rem .9rem 1rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #323232;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+
+form .field input:focus {
+  background-color: #454545;
+}
+
+form .field input:focus + label {
+  font-size: .6rem;
+  top: .5rem;
+}
+
+form input[type="submit"] {
+  background-color: #e50914;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: .8rem;
+  padding: 1rem 0;
+  transition: background-color .3s ease-in-out;
+  margin-top: 2rem;
+}
+
+form input[type="submit"]:hover {
+  background-color: #b40710;
+  cursor: pointer;
+}
+
+form .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 0;
+  margin-bottom: 6rem;
+}
+
+form .actions a, form .actions label {
+  font-size: .8rem;
+}
+
+.bottom-content {
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .bottom-content {
+    padding-top: 6rem;
+  }
+}
+
+.bottom-content a {
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bottom-content .new-user {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.bottom-content .new-user span {
+  color: #FFFFFF;
+  margin-left: .5rem;
+}
+
+.site-footer {
+  border-top: 1px solid #8c8c8c;
+  padding: 2rem 0 4rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer {
+    border-top: unset;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1rem 0 3rem 0;
+  }
+}
+
+.site-footer .container {
+  max-width: 60%;
+}
+
+.site-footer .menu-footer {
+  padding: .5rem 0 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer .menu-footer {
+    max-width: 50%;
+  }
+}
+
+.site-footer .menu-footer a {
+  font-size: .8rem;
+}
+
+.site-footer select {
+  background-color: #000000;
+  border-color: #454545;
+  color: #8c8c8c;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1rem 3rem;
+  font-size: .8rem;
+}

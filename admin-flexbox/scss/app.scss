@@ -1,0 +1,247 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+    @include box-sizing(border-box);
+    height: 100%;
+}
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+body {
+    font-family: $mainFont;
+    height: 100%;
+}
+img {
+    max-width: 100%;
+}
+.no-menu.app {
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+i {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+.header {
+    display: flex;
+    .site-name {
+        flex: 0 0 5rem;
+        @include desktop {
+            flex: 0 0 20rem;
+        }
+        background-color: $secondary;
+        padding-left: 1rem;
+        h1 {
+            color: $white;
+        }
+        .desktop {
+            display: none;
+            @include desktop{
+                display: block;
+            }
+        }
+        .mobile {
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+}
+
+.bar {
+    flex: 1;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    .left-content {
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        color: $white;
+        .fa-arrow-right {
+            display: none;
+        }
+    }
+    .right-content {
+        display: flex;
+
+        .box {
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            &:hover {
+                background-color: $secondary;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                span {
+                    background-color: $tertiary;
+                    padding: .5rem;
+                    margin-left: .5rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    transition: margin-left .3s ease-out;
+    flex: 0 0 20rem;
+    background-color: $darkGray;
+    color: $white;
+    padding: 1rem 2rem 0 2rem;
+    .user {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: bold;
+        img {
+            max-width: 60px;
+        }
+        span {
+            font-weight: normal;
+            display: block;
+        }
+    }
+    .search {
+        margin-top: 1rem;
+        input[type="text"]{
+            width: 100%;
+            height: 3rem;
+            padding: 1rem;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+}
+
+.menu-admin {
+    margin-top: 1rem;
+    h2 {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        > li {
+            padding: .5rem;
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+            ul {
+                display: none;
+                list-style: none;
+                padding: 1rem;
+                background-color: darken($darkGray, 20%);
+                margin-top: 1rem;
+                li {
+                    margin-bottom: 1rem;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+                padding: .5rem;
+                transition: padding-left .3s ease, background-color .3s ease-in-out;
+                &:hover {
+                    background-color: $primary;
+                    padding-left: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+    background-color: $gray;
+    h2 {
+        text-align: center;
+    }
+}
+.new-client {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .field {
+        margin-bottom: 1rem;
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: .5rem;
+        @include tablet {
+            flex: 0 0 50%;
+        }
+        &.expand {
+            flex: 0 0 100%;
+            justify-content: flex-start;
+        }
+        label {
+            flex: 0 0 120px;
+            padding-left: 1rem;
+        }
+        input[type="text"], 
+        textarea {
+            flex: 1;
+            border:none;
+            padding: .5rem 1rem;
+        }
+        textarea{
+            height: 10rem;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            justify-content: space-between;
+            align-items: center;
+            
+            @include tablet {
+                flex: 0 0 40%;
+            }
+
+            label {
+                flex: 1;
+                padding-left: .5rem;
+            }
+        }
+        &.submit {
+            display: flex;
+            justify-content: flex-end;
+            .button {
+                @include button($primary);
+            }
+        }
+    }
+}

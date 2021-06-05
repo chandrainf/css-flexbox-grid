@@ -1,0 +1,20 @@
+{
+  "name": "udemy-start",
+  "version": "1.0.0",
+  "description": "Package JSON for my Flexbox & SASS Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Pablo De la torre",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserlist" : [
+    "> 1%", 
+    "lasts 2 versions"
+  ]
+}

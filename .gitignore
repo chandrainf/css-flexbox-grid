@@ -1,0 +1,12 @@
+# Project dependencies
+udemy-flexbox/node_modules
+udemy-flexbox/package-lock.json
+netflix-flexbox/node_modules
+netflix-flexbox/package-lock.json
+admin-flexbox/node_modules
+admin-flexbox/package-lock.json
+
+
+
+
+.vscode/

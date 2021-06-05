@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AdminFlex</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="app">
+    <header class="header">
+            <div class="site-name">
+                <h1 class="desktop">AdminFlex</h1>
+                <h1 class="mobile">AF</h1>
+            </div>
+            <div class="bar">
+                <div class="left-content">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="right-content">
+                    <div class="messages box">
+                            <a href="#">
+                                <i class="fas fa-comment-alt"></i>
+                                Messages
+                                <span>20</span>
+                            </a>
+                    </div>  
+                    <div class="messages box">
+                            <a href="#">
+                                <i class="fas fa-bell"></i>
+                                Alerts
+                                <span>10</span>
+                            </a>
+                    </div>  
+                    <div class="sign-off box" >
+                        <a href="#">Sign Off</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <main class="main-content">
+        <aside class="sidebar">
+                <div class="user">
+                    <img src="img/user.svg">
+                    <p>Welcome: <span>Admin</span></p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="menu-admin">
+                    <h2>Admin Menu</h2>
+                    <ul class="menu">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-address-book"></i>
+                                Clients
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-list"></i>
+                                        View All
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-plus"></i>
+                                        Add New
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-chart-line"></i>
+                                Sales
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-list"></i>
+                                        View All
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-plus"></i>
+                                        Add New
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-box"></i>
+                                Products
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-list"></i>
+                                        View All
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-plus"></i>
+                                        Add New
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-file-alt"></i>
+                                Invoices
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-list"></i>
+                                        View All
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-plus"></i>
+                                        Add New
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>
+                                Calendar
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-list"></i>
+                                        View All
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-plus"></i>
+                                        Add New
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-pencil-alt"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </aside>
+        <div class="content">
+            <h2 class="heading">Add New Client</h2>
+
+            <form class="new-client">
+
+                <div class="field">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name">
+                </div>
+                <div class="field">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name">
+                </div>
+                <div class="field">
+                    <label for="company">Company</label>
+                    <input type="text" id="company">
+                </div>
+                <div class="field">
+                    <label for="address">Address</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="field expand">
+                    <label for="other-notes">Additional Notes</label>
+                    <textarea id="other-notes" ></textarea>
+                </div>
+
+                <div class="field expand">
+                        <label>Membership:</label>
+                        <div class="options">
+                
+                            <input type="radio" value="basico">
+                            <label for="basico">Basic</label>
+                        
+                            <input type="radio"  value="premium">
+                            <label for="premium">Premium</label>
+
+                            <input type="radio" value="gold">
+                            <label for="gold">Gold</label>
+                        </div>
+                </div>
+
+                <div class="field submit expand">
+                    <input type="submit" class="button" value="Add Client">
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script src="js/app.js" async></script>
+</body>
+</html>
